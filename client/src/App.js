@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { Global } from '@emotion/react';
+import { Layout } from './components/Layout';
+import { MainPage } from './pages/MainPage';
+import { GlobalStyles} from './styles';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Global styles={GlobalStyles} />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+            <Route index element={<MainPage />}/>
+            <Route path="*" element={<Navigate to="/"/>}/>
+        </Route>
+      </Routes>
+    </>
   );
 }
 
