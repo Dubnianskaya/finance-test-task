@@ -6,13 +6,12 @@ export const GlobalStyles = () => css`
     box-sizing: inherit;
   }
   body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
+    margin: 0 auto;
     overflow-x: hidden;
     min-height: 100vh;
     width: 100%;
     background-color: #7ad8f5;
+    color: #fff;
   }
   main {
     flex: 1;
