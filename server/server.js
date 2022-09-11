@@ -3,9 +3,15 @@ const express = require('express');
 const http = require('http');
 const io = require('socket.io');
 const cors = require('cors');
+const logger = require('morgan');
+const mongoose = require('mongoose');
+require('dotenv').config();
 
 const FETCH_INTERVAL = 5000;
-const PORT = process.env.PORT || 4000;
+const {DB_HOST, PORT = 4000} = process.env
+
+const authRouter = require('./routes/api/auth')
+const usersRouter = require('./routes/api/users')
 
 const tickers = [
   'AAPL', // Apple
@@ -57,7 +63,21 @@ function trackTickers(socket) {
 }
 
 const app = express();
+const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
+app.use(logger(formatsLogger))
 app.use(cors());
+app.use(express.json())
+app.use('/api/users', authRouter)
+app.use('/api/users', usersRouter)
+
+app.use((req, res) => {
+  res.status(404).json({ message: 'Not found' })
+})
+
+app.use((err, req, res, next) => {
+  const {status = 500, message = "Server error"} = err
+  res.status(status).json({ message: err.message })
+})
 const server = http.createServer(app);
 
 const socketServer = io(server, {
@@ -76,6 +96,12 @@ socketServer.on('connection', (socket) => {
   });
 });
 
-server.listen(PORT, () => {
+mongoose.connect(DB_HOST)
+.then(() => server.listen(PORT, () => {
   console.log(`Streaming service is running on http://localhost:${PORT}`);
-});
+})).catch((error) => {
+  console.log(error.message)
+  process.exit(1)
+})
+
+
