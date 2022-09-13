@@ -28,7 +28,7 @@ export function FormModal({open, setOpen}) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={style} data-testid="modal-box">
             <ModalTitle>Register or Login to save favorits</ModalTitle>
             <Navigation />
         </Box>

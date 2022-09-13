@@ -23,7 +23,7 @@ export function RegisterPage () {
 
     return (
         <AuthPages>
-        <AuthForm onFormSubmit={handleSubmit} title={"REGISTER"} buttonText={"Register"}/>
+        <AuthForm data-testid="register-page" onFormSubmit={handleSubmit} title={"REGISTER"} buttonText={"Register"}/>
         </AuthPages>
     )
 }

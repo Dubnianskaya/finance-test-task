@@ -24,7 +24,7 @@ export function LoginPage () {
 
     return (
         <AuthPages>
-         <AuthForm onFormSubmit={handleSubmit} title={"LOGIN"} buttonText={"Login"}/>
+         <AuthForm data-testid="login-page" onFormSubmit={handleSubmit} title={"LOGIN"} buttonText={"Login"}/>
         </AuthPages>
     )
 }

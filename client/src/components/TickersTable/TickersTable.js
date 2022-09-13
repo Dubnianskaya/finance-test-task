@@ -9,7 +9,8 @@ import { useSelector } from 'react-redux';
 import { authSelectors } from '../../redux/auth';
 import { TickersTableBody } from '../TickersTableBody';
 import { TablePositionContainer, TableHeader, TableHeaderText } from './TickersTable.styled';
-import { priceChangeFunc, TickerTableScreenSize } from '../../functions/tableBehaviorFunc';
+import { TickerTableScreenSize } from '../../functions/tableBehaviorFunc';
+import { priceChangeFunc } from '../../functions/priceChangeFunc';
 import { FormModal } from '../Modal';
 import { useWindowDimensions } from '../../hooks';
 import { breakPoints, tickersName, phoneTickers } from '../../libs/constants';
@@ -46,7 +47,7 @@ export function TickersTable ({tickers}) {
             {tickersArray.map((ticker) => {
               const index = tickersArray.indexOf(ticker);
               const isItemSelected = isSelected(index);
-              const increasedPrice = priceChangeFunc(tickers, ticker) || false;
+              const increasedPrice = priceChangeFunc(tickers.prevState, ticker);
               const tickersByScreenSize = TickerTableScreenSize(ticker, windowDimensions)
               return (
                 <TickersTableBody key={ticker.ticker} selected={userFavorites} ticker={tickersByScreenSize} isItemSelected={isItemSelected} index={index} increasedPrice={increasedPrice} handleOpen={handleOpen}/>

@@ -25,7 +25,7 @@ export function MainPage () {
   
     return (
         <Container>
-         <MainPageContainer>
+         <MainPageContainer data-testid="main-page">
            <FavoritesList tickers={tickers}/>
            <TickersTable tickers={tickers}/>
          </MainPageContainer>

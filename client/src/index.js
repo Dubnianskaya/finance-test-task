@@ -1,21 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { store, persistor } from './redux';
-import { PersistGate } from 'redux-persist/integration/react';
+import AppWithWrappers from './App';
 import 'modern-normalize';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </PersistGate>
-    </Provider>
+      <AppWithWrappers />    
   </React.StrictMode>,
   document.getElementById('root')
 );

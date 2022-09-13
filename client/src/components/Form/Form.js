@@ -7,7 +7,7 @@ import { FormStyled, FormTitle } from './Form.styled';
 import { Container } from '../Container';
 import { emailRegExp } from '../../libs/constants';
 
-export function AuthForm({onFormSubmit, title, buttonText}) {
+export function AuthForm({onFormSubmit, title="", buttonText=""}) {
 
   return (
     <Container>
@@ -32,23 +32,20 @@ export function AuthForm({onFormSubmit, title, buttonText}) {
         onFormSubmit(values);
       }}
     >
-        {() => {
-       return (
-        <FormStyled>
-                <MyTextInput
-                  label="Email"
-                  name="email"
-                  type="text"
-                />
-                <MyTextInput
-                  label="Password"
-                  name="password"
-                  type="text"
-                />
-            <Button type="submit" variant="contained" size="large">{buttonText}</Button>
-            </FormStyled>
-        );
-       }}
+      <FormStyled>
+              <MyTextInput
+                label="Email"
+                name="email"
+                type="email"
+              />
+              <MyTextInput
+                label="Password"
+                name="password"
+                type="text"
+              />
+          <Button type="submit" variant="contained" size="large">{buttonText}</Button>
+          </FormStyled>
+    
     </Formik>
   </Container>
   );
