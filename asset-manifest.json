@@ -2,28 +2,28 @@
   "files": {
     "static/js/0.288fb86e.chunk.js": "/finance-test-task/static/js/0.288fb86e.chunk.js",
     "static/js/0.288fb86e.chunk.js.map": "/finance-test-task/static/js/0.288fb86e.chunk.js.map",
-    "static/js/1.fc0ccc6a.chunk.js": "/finance-test-task/static/js/1.fc0ccc6a.chunk.js",
-    "static/js/1.fc0ccc6a.chunk.js.map": "/finance-test-task/static/js/1.fc0ccc6a.chunk.js.map",
-    "static/js/2.760919dc.chunk.js": "/finance-test-task/static/js/2.760919dc.chunk.js",
-    "static/js/2.760919dc.chunk.js.map": "/finance-test-task/static/js/2.760919dc.chunk.js.map",
-    "static/js/3.e36835c7.chunk.js": "/finance-test-task/static/js/3.e36835c7.chunk.js",
-    "static/js/3.e36835c7.chunk.js.map": "/finance-test-task/static/js/3.e36835c7.chunk.js.map",
-    "main.js": "/finance-test-task/static/js/main.ba707bae.chunk.js",
-    "main.js.map": "/finance-test-task/static/js/main.ba707bae.chunk.js.map",
-    "runtime-main.js": "/finance-test-task/static/js/runtime-main.07af3167.js",
-    "runtime-main.js.map": "/finance-test-task/static/js/runtime-main.07af3167.js.map",
+    "static/js/1.9e65ddd3.chunk.js": "/finance-test-task/static/js/1.9e65ddd3.chunk.js",
+    "static/js/1.9e65ddd3.chunk.js.map": "/finance-test-task/static/js/1.9e65ddd3.chunk.js.map",
+    "static/js/2.d18de26d.chunk.js": "/finance-test-task/static/js/2.d18de26d.chunk.js",
+    "static/js/2.d18de26d.chunk.js.map": "/finance-test-task/static/js/2.d18de26d.chunk.js.map",
+    "static/js/3.e6216345.chunk.js": "/finance-test-task/static/js/3.e6216345.chunk.js",
+    "static/js/3.e6216345.chunk.js.map": "/finance-test-task/static/js/3.e6216345.chunk.js.map",
+    "main.js": "/finance-test-task/static/js/main.6aa45258.chunk.js",
+    "main.js.map": "/finance-test-task/static/js/main.6aa45258.chunk.js.map",
+    "runtime-main.js": "/finance-test-task/static/js/runtime-main.a007ace2.js",
+    "runtime-main.js.map": "/finance-test-task/static/js/runtime-main.a007ace2.js.map",
     "static/css/6.bc922b9c.chunk.css": "/finance-test-task/static/css/6.bc922b9c.chunk.css",
-    "static/js/6.ace91159.chunk.js": "/finance-test-task/static/js/6.ace91159.chunk.js",
-    "static/js/6.ace91159.chunk.js.map": "/finance-test-task/static/js/6.ace91159.chunk.js.map",
+    "static/js/6.3181c59a.chunk.js": "/finance-test-task/static/js/6.3181c59a.chunk.js",
+    "static/js/6.3181c59a.chunk.js.map": "/finance-test-task/static/js/6.3181c59a.chunk.js.map",
     "index.html": "/finance-test-task/index.html",
     "static/css/6.bc922b9c.chunk.css.map": "/finance-test-task/static/css/6.bc922b9c.chunk.css.map",
     "static/js/0.288fb86e.chunk.js.LICENSE.txt": "/finance-test-task/static/js/0.288fb86e.chunk.js.LICENSE.txt",
-    "static/js/6.ace91159.chunk.js.LICENSE.txt": "/finance-test-task/static/js/6.ace91159.chunk.js.LICENSE.txt"
+    "static/js/6.3181c59a.chunk.js.LICENSE.txt": "/finance-test-task/static/js/6.3181c59a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.07af3167.js",
+    "static/js/runtime-main.a007ace2.js",
     "static/css/6.bc922b9c.chunk.css",
-    "static/js/6.ace91159.chunk.js",
-    "static/js/main.ba707bae.chunk.js"
+    "static/js/6.3181c59a.chunk.js",
+    "static/js/main.6aa45258.chunk.js"
   ]
 }
